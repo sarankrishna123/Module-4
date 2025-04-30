@@ -35,11 +35,59 @@ To write a Python program to perform addition and division operations using a cl
 ### PROGRAM
 
 ```
+reg:212223070023
+name:Saran krishna P S
+class Saveetha:
+    def setvalues(self, a, b):
+        self.a = a
+        self.b = b
+
+    def add(self):
+        return self.a + self.b
+
+    def div(self):
+        if self.b != 0:
+            return self.a / self.b
+        else:
+            return "Error: Division by zero"
+
+def main():
+    calc = Saveetha()
+
+    while True:
+        print("\n1. Add")
+        print("2. Divide")
+        print("0. Exit")
+        choice = int(input("Enter your choice: "))
+
+        if choice == 1:
+            a = float(input("Enter first number: "))
+            b = float(input("Enter second number: "))
+            calc.setvalues(a, b)
+            print(f"Addition result: {calc.add()}")
+
+        elif choice == 2:
+            a = float(input("Enter first number: "))
+            b = float(input("Enter second number: "))
+            calc.setvalues(a, b)
+            print(f"Division result: {calc.div()}")
+
+        elif choice == 0:
+            print("Exiting program.")
+            break
+
+        else:
+            print("Invalid choice")
+
+if __name__ == "__main__":
+    main()
 
 
 
 ```
 
 ### OUTPUT
+![image](https://github.com/user-attachments/assets/4c40f902-befa-4dd7-80aa-deb23c92c7a6)
 
 ### RESULT
+thus the program is executed successfully.
