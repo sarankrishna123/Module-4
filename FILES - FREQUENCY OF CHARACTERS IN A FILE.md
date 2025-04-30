@@ -30,11 +30,33 @@ To write a Python program that reads a file and counts the frequency of each cha
 ### PROGRAM
 
 ```
+regno:212223070023
+name:Saran Krishna P S
+def count_characters(filename):
+    try:
+        with open(filename, 'r', encoding='utf-8') as file:
+            text = file.read()
+            frequency = {}
+
+            for char in text:
+                frequency[char] = frequency.get(char, 0) + 1
+
+            for char, count in frequency.items():
+                print(f"'{char}': {count}")
+    except FileNotFoundError:
+        print("The file was not found.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+filename = input("Enter the file name: ")
+count_characters(filename)
 
 ```
 
 
 ### OUTPUT
 
+![image](https://github.com/user-attachments/assets/2f882597-82b3-4923-a4a4-603e10428e82)
 
 ### RESULT
+thus the above program is executed successfully.
